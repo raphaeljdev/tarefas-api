@@ -1,0 +1,118 @@
+{
+  "info": {
+    "name": "Tarefas API - Entrega",
+    "_postman_id": "e3a7f0b0-0000-0000-0000-000000000001",
+    "description": "Coleção para validar CRUD da API de Tarefas. Lembre-se de alterar o nome/responsável com SEU NOME e RU.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Criar Tarefa (com NOME e RU)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"nome\": \"Trabalho Web Back End - Seu Nome RU000000\", \"dataEntrega\": \"2025-09-15\", \"responsavel\": \"Seu Nome\"}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/tarefas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "tarefas"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Listar Tarefas",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/tarefas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "tarefas"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Buscar por ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/tarefas/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "tarefas",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Atualizar (coloque NOME e RU)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"nome\": \"Trabalho Atualizado - Seu Nome RU000000\", \"dataEntrega\": \"2025-09-20\", \"responsavel\": \"Seu Nome\"}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/tarefas/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "tarefas",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Deletar",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:8080/tarefas/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "tarefas",
+            "1"
+          ]
+        }
+      }
+    }
+  ]
+}
